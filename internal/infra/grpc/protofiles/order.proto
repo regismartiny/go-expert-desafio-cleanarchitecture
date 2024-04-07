@@ -22,7 +22,7 @@ message CreateOrderResponse {
   double final_price = 4;
 }
 
-message ListOrdersRequest {}
+message Blank {}
 
 message ListOrdersResponse {
   int32 quantity = 1;
@@ -31,8 +31,5 @@ message ListOrdersResponse {
 
 service OrderService {
   rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
-}
-
-service ListOrdersService {
-  rpc ListOrders(ListOrdersRequest) returns (ListOrdersResponse);
+  rpc ListOrders(Blank) returns (ListOrdersResponse);
 }
