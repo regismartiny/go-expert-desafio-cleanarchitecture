@@ -10,13 +10,11 @@ import (
 type OrderService struct {
 	pb.UnimplementedOrderServiceServer
 	CreateOrderUseCase usecase.CreateOrderUseCase
-	ListOrderUseCase   usecase.ListOrdersUseCase
 }
 
-func NewOrderService(createOrderUseCase usecase.CreateOrderUseCase, listOrdersUseCase usecase.ListOrdersUseCase) *OrderService {
+func NewOrderService(createOrderUseCase usecase.CreateOrderUseCase) *OrderService {
 	return &OrderService{
 		CreateOrderUseCase: createOrderUseCase,
-		ListOrderUseCase:   listOrdersUseCase,
 	}
 }
 
@@ -32,24 +30,8 @@ func (s *OrderService) CreateOrder(ctx context.Context, in *pb.CreateOrderReques
 	}
 	return &pb.CreateOrderResponse{
 		Id:         output.ID,
-		Price:      float32(output.Price),
-		Tax:        float32(output.Tax),
-		FinalPrice: float32(output.FinalPrice),
+		Price:      output.Price,
+		Tax:        output.Tax,
+		FinalPrice: output.FinalPrice,
 	}, nil
 }
-
-// func (s *OrderService) ListOrders(ctx context.Context, in *pb.ListOrdersRequest) (*pb.ListOrdersResponse, error) {
-// 	output, err := s.ListOrderUseCase.Execute()
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	return &pb.ListOrdersResponse{
-// 		Quantity: len(output),
-// 		Orders: {
-// 			Id:         output.ID,
-// 			Price:      float32(output.Price),
-// 			Tax:        float32(output.Tax),
-// 			FinalPrice: float32(output.FinalPrice),
-// 		},
-// 	}, nil
-// }
