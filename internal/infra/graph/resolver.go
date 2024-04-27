@@ -8,5 +8,5 @@ import "github.com/devfullcycle/20-CleanArch/internal/usecase"
 
 type Resolver struct {
 	CreateOrderUseCase usecase.CreateOrderUseCase
-	ListOrderUseCase   usecase.ListOrdersUseCase
+	ListOrdersUseCase  usecase.ListOrdersUseCase
 }
