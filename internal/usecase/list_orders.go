@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"github.com/devfullcycle/20-CleanArch/internal/entity"
-	"github.com/devfullcycle/20-CleanArch/pkg/events"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/internal/entity"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/pkg/events"
 )
 
 type ListOrdersOutputDTO struct {

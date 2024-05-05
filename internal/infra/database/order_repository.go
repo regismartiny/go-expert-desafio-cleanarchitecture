@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/devfullcycle/20-CleanArch/internal/entity"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/internal/entity"
 )
 
 type OrderRepository struct {

@@ -6,13 +6,13 @@ package main
 import (
 	"database/sql"
 
-	"github.com/devfullcycle/20-CleanArch/internal/entity"
-	"github.com/devfullcycle/20-CleanArch/internal/event"
-	"github.com/devfullcycle/20-CleanArch/internal/infra/database"
-	"github.com/devfullcycle/20-CleanArch/internal/infra/web"
-	"github.com/devfullcycle/20-CleanArch/internal/usecase"
-	"github.com/devfullcycle/20-CleanArch/pkg/events"
 	"github.com/google/wire"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/internal/entity"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/internal/event"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/internal/infra/database"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/internal/infra/web"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/internal/usecase"
+	"github.com/regismartiny/go-expert-desafio-cleanarchitecture/pkg/events"
 )
 
 var setOrderRepositoryDependency = wire.NewSet(
