@@ -1,4 +1,4 @@
-# Desafio 3 da pós gradução FullCycle Go Expert
+# Desafio 3 da Pós-graduação Full Cycle Go Expert
 
 ## Enunciado do desafio
 
